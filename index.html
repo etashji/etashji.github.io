@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <!--Head-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" />
+        <title>Eric Tashji Porfolio</title>
+        <link rel="shortcut icon" type="img/jpg" href="images/coding_icon.png">
+        <link rel="stylesheet" type="text/css" href="stylesheets/CSS.css">
+    </head>
+
+    <!--Background-->
+    <body class="Background">
+
+        <!--Navbar-->
+        <div class="Navbar">
+            <a class="active" href="#Home">Home</a>
+            <a href="#Slideshow">Slideshow</a>
+            <a href="#About">About</a>
+            <a href="#GitHub">GitHub</a>
+            <a onclick="openForm()" ondbclick="closeForm()" class="contact">Contact</a>
+        </div>
+
+        <!--Home-->
+        <div id="Home">
+            <!--Background Video-->
+            <video autoplay muted loop id="Coding_Video">
+                <source src="./videos/coding.mp4">        
+                <!--Error Display Message-->
+                Your browser does not support HTML5 videos.
+            </video>
+        </div>
+        
+        <!--Video Text-->
+        <div class="Video_Text">
+            <h1 class="white-text">Eric Tashji's Portfolio</h1>
+            <strong>
+                <p class="center">
+                    <q>Any fool can write code that a computer can understand.
+                        <br> Good programmers write code that humans can understand.
+                    </q>
+                    <br> - Martin Fowler
+                    <br>
+                    <br>My name is Eric Tashji, and I designed this website.
+                    <br>On this site, you will find details about my background and experience.
+                    <br>
+                    <br>Thank you for visiting my website!
+                </p>
+            </strong>
+        </div>
+
+        <!--Slideshow section added -->
+        <div id="Slideshow">
+            <div id="Slideshow_Background">
+                <div class="slideshow-container">
+
+                    <div class="mySlides fade">
+                      <div class="numbertext">1 / 6</div>
+                      <img src="Images/personal_pic.jpg" style="width:100%">
+                      <div class="text">I'm always available to help with your project!</div> -->
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <div class="numbertext">2 / 6</div>
+                      <img src="Images/c-shar-dot-net.jpg" style="width:100%">
+                      <div class="text">I'm trained in C# and .NET,</div> -->
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <div class="numbertext">3 / 6</div>
+                      <img src="Images/Python.jpeg" style="width:100%">
+                      <div class="text">as well as Python, </div> -->
+                    </div>
+                    
+                    <div class="mySlides fade">
+                        <div class="numbertext">4 / 6</div>
+                        <img src="Images/js_html_css.png" style="width:100%">
+                        <div class="text">JavaScript, HTML, CSS,</div> -->
+                      </div>
+                      
+                      <div class="mySlides fade">
+                        <div class="numbertext">5 / 6</div>
+                        <img src="Images/sql_and_database.jpg" style="width:100%">
+                        <div class="text">and SQL and databases.</div> -->
+                      </div>
+                      
+                      <div class="mySlides fade">
+                        <div class="numbertext">6 / 6</div>
+                        <img src="Images/coding.png" style="width:100%">
+                        <div class="text">Feel free to contact me!</div> -->
+                      </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    
+                    </div>
+                    <br>
+                    
+                    <div style="text-align:center">
+                      <span class="dot" onclick="currentSlide(1)"></span> 
+                      <span class="dot" onclick="currentSlide(2)"></span> 
+                      <span class="dot" onclick="currentSlide(3)"></span>
+                      <span class="dot" onclick="currentSlide(4)"></span>
+                      <span class="dot" onclick="currentSlide(5)"></span> 
+                      <span class="dot" onclick="currentSlide(6)"></span>
+                    </div>
+            </div>
+        </div>
+        <!--About-->
+        <div class="Row" id="About">
+            <!--Left Column-->
+            <div class="Column_2">
+                <img src="./images/coding_image.jpg" alt="Coding Video">
+            </div>
+            <!--Right Column-->
+            <div class="Column_1">
+                <h1>About</h1>
+                <p>
+                    I am a software developer, and I love coding! I am also a former music teacher and video game enthusiast!
+                    <br>
+                    <br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy's</a> C# and .NET Framework Boot Camp, and am trained and experienced in the following web and programming languages: HTML, CSS, Javascript, SQL, C#, and more. 
+                    <br>
+                    <br>I am a junior level developer and would love to work with you on your project. <a onclick="openForm()" class="contact">Contact</a> me below!
+                </p>
+            </div>
+        </div>
+
+        <!--GitHub-->
+        <div class="Row" id="GitHub">
+            <!--Left Column-->
+            <div class="Column_1">
+                <h1>Github</h1>
+                <p class="center">
+                    View my GitHub profile here:
+                    <br>
+                    <p class="center"><a href="https://github.com/etashji" target="_blank">Eric Tashji Github</a></p>
+                </p>
+            </div>
+            <!--Right Column-->
+            <div class="Column_2">
+                <a href="https://github.com/etashji" target="_blank"><img src="./images/GitHub-logo.jpg" alt="GitHub logo"></a>
+            </div>
+        </div>
+
+        <!--Contact-->
+        <div id = "Contact">
+            <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+            <div class="form-popup" id="myForm">
+               <form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container">
+                    <h1>Contact</h1>
+                    <label for="name"><b>Name</b></label>
+                        <input type="text" placeholder="Please type your name here" name="name" required>
+                    <label for="company"><b>Company</b></label>
+                        <input type="text" placeholder="Please type your company name here" name="company">
+                    <label for="email"><b>Email</b></label>
+                        <input type="text" placeholder="Please type your email address here" name="email" required>
+                    <label for="phone"><b>Phone</b></label>
+                        <input type="text" placeholder="Please type your phone number here" name="phone">
+                    
+                    <button type="submit" class="btn">SUBMIT</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+               </form>
+            </div>
+        </div>
+        <!--Footer-->
+        <footer>
+                <p class="center">&copy Prosper Consulting Inc., <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a></p><br>
+        </footer>
+        <script src="JS/portfolio.js"></script>
+    </body>
+</html>
