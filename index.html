@@ -1,174 +1,767 @@
 <!DOCTYPE html>
-<html>
-    <!--Head-->
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width" />
-        <title>Eric Tashji Porfolio</title>
-        <link rel="shortcut icon" type="img/jpg" href="Images/coding_icon.png">
-        <link rel="stylesheet" type="text/css" href="Stylesheets/CSS.css">
-    </head>
+<html lang="en">
 
-    <!--Background-->
-    <body class="Background">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eric Tashji - Portflio</title>
 
-        <!--Navbar-->
-        <div class="Navbar">
-            <a class="active" href="#Home">Home</a>
-            <a href="#Slideshow">Slideshow</a>
-            <a href="#About">About</a>
-            <a href="#GitHub">GitHub</a>
-            <a onclick="openForm()" ondbclick="closeForm()" class="contact">Contact</a>
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar.png" alt="Richard hanrick" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Richard hanrick">Eric Tashji</h1>
+
+          <p class="title">Software developer</p>
         </div>
 
-        <!--Home-->
-        <div id="Home">
-            <!--Background Video-->
-            <video autoplay muted loop id="Coding_Video">
-                <source src="Videos/coding.mp4">        
-                <!--Error Display Message-->
-                Your browser does not support HTML5 videos.
-            </video>
-        </div>
-        
-        <!--Video Text-->
-        <div class="Video_Text">
-            <h1 class="white-text">Eric Tashji's Portfolio</h1>
-            <strong>
-                <p class="center">
-                    <q>Any fool can write code that a computer can understand.
-                        <br> Good programmers write code that humans can understand.
-                    </q>
-                    <br> - Martin Fowler
-                    <br>
-                    <br>My name is Eric Tashji, and I designed this website.
-                    <br>On this site, you will find details about my background and experience.
-                    <br>
-                    <br>Thank you for visiting my website!
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:richard@example.com" class="contact-link">etashji@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+12133522795" class="contact-link">(201) 739-1208</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="1982-06-23">June 14, 1996</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Oakland, NJ, USA</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/eric-tashji-64ab22306/" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://github.com/etashji" class="social-link">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            I am a former teacher with a Masters of Science in Computer Science from Stevens Institute of Technology, as well as a software development 
+            certification from the Tech Academy.
+          </p>
+
+          <p>
+            I have proficiency in a variety of coding languages and concepts, including C#, .NET Framework, HTML, CSS, JavaScript, Microsoft Visual Studio,
+            MongoDB, JSON, AJAX, Linux, C++, Java, Android Studio, Python, Django, SQL, Microsoft SQL Server, PostgreSQL, Object-oriented programming, algorithms, data structures, 
+            operating systems, and machine learning.
+            <br>
+            <br>
+            My experience as a teacher has also given me organizational and interpersonal skills.
+          </p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What i'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.png
+                " alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web Development</h4>
+
+                <p class="service-item-text">
+                  Web development in a variety of languages, including HTML, CSS, JavaScript, C#, and Python. 
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.png" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Data Management</h4>
+
+                <p class="service-item-text">
+                  Proficiency in SQL using both MS SQL Server and PostgreSQL.
                 </p>
-            </strong>
-        </div>
+              </div>
 
-        <!--Slideshow section added -->
-        <div id="Slideshow">
-            <div id="Slideshow_Background">
-                <div class="slideshow-container">
+            </li>
 
-                    <div class="mySlides fade">
-                      <div class="numbertext">1 / 6</div>
-                      <img src="Images/personal_pic.jpg" style="width:100%">
-                      <div class="text">I'm always available to help with your project!</div> -->
-                    </div>
-                    
-                    <div class="mySlides fade">
-                      <div class="numbertext">2 / 6</div>
-                      <img src="Images/c-shar-dot-net.jpg" style="width:100%">
-                      <div class="text">I'm trained in C# and .NET,</div> -->
-                    </div>
-                    
-                    <div class="mySlides fade">
-                      <div class="numbertext">3 / 6</div>
-                      <img src="Images/Python.jpeg" style="width:100%">
-                      <div class="text">as well as Python, </div> -->
-                    </div>
-                    
-                    <div class="mySlides fade">
-                        <div class="numbertext">4 / 6</div>
-                        <img src="Images/js_html_css.png" style="width:100%">
-                        <div class="text">JavaScript, HTML, CSS,</div> -->
-                      </div>
-                      
-                      <div class="mySlides fade">
-                        <div class="numbertext">5 / 6</div>
-                        <img src="Images/sql_and_database.jpg" style="width:100%">
-                        <div class="text">and SQL and databases.</div> -->
-                      </div>
-                      
-                      <div class="mySlides fade">
-                        <div class="numbertext">6 / 6</div>
-                        <img src="Images/coding.png" style="width:100%">
-                        <div class="text">Feel free to contact me!</div> -->
-                      </div>
+            <li class="service-item">
 
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                    
-                    </div>
-                    <br>
-                    
-                    <div style="text-align:center">
-                      <span class="dot" onclick="currentSlide(1)"></span> 
-                      <span class="dot" onclick="currentSlide(2)"></span> 
-                      <span class="dot" onclick="currentSlide(3)"></span>
-                      <span class="dot" onclick="currentSlide(4)"></span>
-                      <span class="dot" onclick="currentSlide(5)"></span> 
-                      <span class="dot" onclick="currentSlide(6)"></span>
-                    </div>
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-app.png" alt="mobile app icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Mobile apps</h4>
+
+                <p class="service-item-text">
+                  Professional development of Android apps using Java and Android Studio.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-photo.png" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Machine Learning</h4>
+
+                <p class="service-item-text">
+                  Capable of implementing multiple machine learning algorithms using Python and Jupyter Notebook.
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
             </div>
-        </div>
-        <!--About-->
-        <div class="Row" id="About">
-            <!--Left Column-->
-            <div class="Column_2">
-                <img src="Images/coding_image.jpg" alt="Coding Video">
-            </div>
-            <!--Right Column-->
-            <div class="Column_1">
-                <h1>About</h1>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+              <time datetime="2021-06-14">14 June, 2021</time>
+
+              <div data-modal-text>
                 <p>
-                    I am a software developer, and I love coding! I am also a former music teacher and video game enthusiast!
-                    <br>
-                    <br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy's</a> C# and .NET Framework Boot Camp, and am trained and experienced in several programming languages, including HTML, CSS, Javascript, SQL, C#, and more. 
-                    <br>
-                    <br>I am a junior level developer and would love to work with you on your project. <a onclick="openForm()" class="contact">Contact</a> me!
+                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                  lot of experience
+                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                  consectetur adipiscing
+                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
                 </p>
+              </div>
+
             </div>
+
+          </section>
+
         </div>
 
-        <!--GitHub-->
-        <div class="Row" id="GitHub">
-            <!--Left Column-->
-            <div class="Column_1">
-                <h1>Github</h1>
-                <p class="center">
-                    View my Professional profiles here:
-                    <br>
-                    <p class="center"><a href="https://github.com/etashji" target="_blank">Github</a></p>
-                    <p class="center"><a href="https://www.linkedin.com/in/eric-tashji-7786a5176/" target="_blank">LinkedIn</a></p>
-                    <p class="center"><a href="https://drive.google.com/file/d/1aIb_82jSSBQDGADCzwu3deYmvqyNs6l1/view?usp=sharing" target="_blank">Resume</a></p>
-"
-                </p>
-            </div>
-            <!--Right Column-->
-            <div class="Column_2">
-                <a href="https://github.com/etashji" target="_blank"><img src="Images/GitHub-logo.jpg" alt="GitHub logo"></a>
-            </div>
-        </div>
 
-        <!--Contact-->
-        <div id = "Contact">
-            <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
-            <div class="form-popup" id="myForm">
-               <form action="https://formspree.io/f/mjvlopjz" method="POST" class="form-container">
-                    <h1>Contact</h1>
-                    <label for="name"><b>Name</b></label>
-                        <input type="text" placeholder="Please type your name here" name="name" required>
-                    <label for="company"><b>Company</b></label>
-                        <input type="text" placeholder="Please type your company name here" name="company">
-                    <label for="email"><b>Email</b></label>
-                        <input type="text" placeholder="Please type your email address here" name="email" required>
-                    <label for="phone"><b>Phone</b></label>
-                        <input type="text" placeholder="Please type your phone number here" name="phone">
-                    
-                    <button type="submit" class="btn">SUBMIT</button>
-                    <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
-               </form>
+        <!--
+          - clients
+        -->
+
+        <section class="clients">
+
+          <h3 class="h3 clients-title">Education/Experience</h3>
+
+          <ul class="clients-list has-scrollbar">
+
+            <li class="clients-item">
+              <a href="https://www.mspbuilder.com">
+                <img src="./assets/images/logo-1-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#https://www.stevens.edu">
+                <img src="./assets/images/logo-2-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-3-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="https://www.messiah.edu">
+                <img src="./assets/images/logo-4-color.png" alt="client logo">
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="bookmark-outline"></ion-icon>
             </div>
-        </div>
-        <!--Footer-->
-        <footer>
-                <p class="center">&copy Prosper Consulting Inc., <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a></p><br>
-        </footer>
-        <script src="JS/portfolio.js"></script>
-    </body>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Stevens Institute of Technology</h4>
+
+              <span>2023 — 2024</span>
+
+              <p class="timeline-text">
+                I graduated from Stevens Institute of Technology with a Master of Science in Computer Science, and had an overall GPA of 3.9.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">The Tech Academy</h4>
+
+              <span>2022</span>
+
+              <p class="timeline-text">
+                I graduated from the Tech Academy with honors, acquiring both Software Developer and Python Developer certifications.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Messiah University</h4>
+
+              <span>2015 — 2019</span>
+
+              <p class="timeline-text">
+                I graduated from Messiah University with a Bachelor of Science in Music Education, and had an overall GPA of 3.7. I also participated
+                in the Messiah College Honors program.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Indian Hills High School</h4>
+
+              <span>2011 - 2015</span>
+
+              <p class="timeline-text">
+                I received my high school diploma from Indian Hills High School in Oakland, NJ, and graduated with an overall GPA of 3.8. 
+                I also received the John Phillip Sousa award for musical excellence while participating in my school's band program.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="laptop-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">MSPBuilder</h4>
+
+              <span>2022</span>
+              <ul class="timeline-text">
+                <li>Created a CSS Skin for the MojoPortal Content Management System.</li>
+                <li>Utilized ASP.NET Forms to implement a MojoPortal Module.</li>
+                <li>Implemented Security Features with a remote desktop application.</li>
+              </ul>
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Prosper IT Consulting</h4>
+
+              <span>2022</span>
+              <ul class="timeline-text">
+                <li>Built an ASP.NET web application, allowing users to insert photos.</li>
+                <li>Applied C#, Entity Framework, and Microsoft Visual Studio, to scaffold the CRUD pages for an MVC web application, creating a “Create,” “Index,” “Edit,” “Delete,” and “Details page for the model.</li>
+                <li>Employed CSS/’Javascript to stylize web pages and ensure functionality.</li>
+                <li>Designed a fitness calculator app using Django and a variety of APIs.</li>  
+                <li>Made use of Python to develop algorithms for determining health statistics based on user input, and saved those statistics to a database for retrieval.</li>
+              </ul>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Sporting Hill Elementary School</h4>
+
+              <span>2020 — 2021</span>
+
+              <ul class="timeline-text">
+                <li>Communicated and maintained rapport with parents, students, faculty, and administrators.</li>
+                <li>Organized and produced lesson schedules.</li>
+                <li>Prepared and implemented daily lesson plans.</li>
+              </ul>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Hosokawa Micron Powder Systems</h4>
+
+              <span>2017</span>
+
+              <ul class="timeline-text">
+                <li>Generated descriptive technical articles published on company website.</li>
+                <li>Wrote a detailed technical article on company equipment, published in Powder & Bulk Solids magazine.</li>
+                <li>Developed Technical sales literature for product processing equipment.</li>
+              </ul>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+        </section>
+
+      </article>
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <div class="filter-select-box" hidden>
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="https://github.com/etashji/LiveProject/blob/main/README.md">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">C# and .NET</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="https://github.com/etashji/LiveProject/blob/main/README2.md">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Python and Django</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="https://github.com/etashji/Masters-Projects/tree/main/2024S%20CS-546%20Web%20Programming/Final%20Project/Final%20Project%20Code">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">HTML, CSS, and Javascript</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="https://github.com/etashji/Masters-Projects/tree/main/2024A%20CS%20522-WN%20Mobile%20Applications/Assignment%2010%20gRPC%20Client/Assignment-Code/Chat-App-gRPC">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Android Studio</h3>
+
+                <p class="project-category">Mobile Development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="https://github.com/etashji/Masters-Projects/tree/main/2023F%20CS%20561-WN1%20Database%20SQL">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
+                </figure>
+
+                <h3 class="project-title">SQL and PostgreSQL</h3>
+
+                <p class="project-category">Data Management</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="https://github.com/etashji/Masters-Projects/tree/main/2024A%20CPE%20695-WN%20Applied%20Machine%20Learning/Project/Final%20Report">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Python and Jupyter Notebook</h3>
+
+                <p class="project-category">Machine Learning</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="https://github.com/etashji/Masters-Projects/tree/main/2024S%20CS%20520-WN%20Operating%20Systems">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Linux and C++</h3>
+
+                <p class="project-category">Operating Systems</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="https://github.com/etashji/Masters-Projects/tree/main/2023A%20CS%20590-WN1%20Data%20Structures%20and%20Algorithms">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Data Structures and Algorithms</h3>
+
+                <p class="project-category">Programming Concepts</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="https://github.com/etashji/The-Tech-Academy-Basic-C-Sharp-Projects">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Object-Oriented Programming</h3>
+
+                <p class="project-category">Programming Concepts</p>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #BLOG
+      -->
+
+      <article class="blog" data-page="blog">
+
+      </article>
+
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
 </html>
